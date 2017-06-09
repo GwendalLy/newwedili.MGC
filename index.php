@@ -18,9 +18,9 @@
 
         <link rel="stylesheet" href="style.css" type="text/css">      
     </head>
-        <body> 
+    <body> 
              <!-- CHANGE THE ACTION TO THE PHP SCRIPT THAT WILL PROCESS THE FILE VIA AJAX -->
-            <form id="file-upload-form" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <!--<form id="file-upload-form" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                  <input id="file-upload" type="file" name="fileUpload" />
                 <label for="file-upload" id="file-drag">
                      Select a file to upload
@@ -34,7 +34,44 @@
                 </progress>
 
                 <output for="file-upload" id="messages"></output>
-            </form>
+            </form> -->
+
+        <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
+            <div>
+                <div>
+                    <label>Votre adresse :</label>
+                    <input type="text" class="formControl" placeholder="Votre adresse :" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Envoyer a :</label>
+                    <input type="text" class="formControl" placeholder="Envoyer a :" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Votre message :</label>
+                    <textarea class="formControl" placeholder="Contenu :" id="message" name="message"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Fichier :</label>
+                    <input type="file" name="fichier"/>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div id="success"></div>
+            <div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </form>
 
             <?php
             // $fn = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : false);
@@ -55,5 +92,6 @@
             //     unlink($targetDir . $file);
             // }
             ?>
-        </body>
+
+    </body>
 </html>
