@@ -29,16 +29,21 @@ $password = "lgwendal@2017";
 if ($_FILES['fichier']['error'] == 0){
 
 	$infosfichier = pathinfo($_FILES['fichier']['name']);
-    $extension_upload = $infosfichier['extension'];
-    $namefichier = $infosfichier['filename'];
-    $file = '' .time(). '' .$namefichier. '.' .$extension_upload;
+  $extension_upload = $infosfichier['extension'];
+  $namefichier = $infosfichier['filename'];
+  $file = '' .time(). '' .$namefichier. '.' .$extension_upload;
 
-    move_uploaded_file( $_FILES['fichier']["tmp_name"], "./fichierEnvoi/".$file);
+  move_uploaded_file( $_FILES['fichier']["tmp_name"], "./fichierEnvoi/".$file);
 }
 
 $zip = new ZipArchive();
 if(is_dir('fichierEnvoi/')){
   if($zip->open('fichierEnvoi/Archive.zip', ZipArchive::CREATE) === true) {
+
+      $infosadresse = pathinfo($adresse);
+      $nameadresse = $infosadresse['filename'];
+      rename ("/Archive.zip", '/'.$nameadresse.'Archive.zip');
+
       echo 'fichierEnvoi.zip ouvert<br/>';
       $fichiers = scandir('fichierEnvoi/');
       unset($fichiers[0], $fichiers[1]);
@@ -54,7 +59,7 @@ if(is_dir('fichierEnvoi/')){
 }
 unlink("fichierEnvoi/".$file);
 
-$liens = "http://vesoul.codeur.online/front/lgwendal/newwedili.MGC/fichierEnvoi/Archive.zip";
+$liens = "http://vesoul.codeur.online/front/lgwendal/newwedili.MGC/fichierEnvoi/".$nameadresse."Archive.zip";
 
 if(!in_array(true, $error)) {
     mail($_POST['destinataire'], 'Vous avez des fichiers à télécharger', $_POST['message'], $liens, 'From: "'.$_POST['adresse']);    
