@@ -1,8 +1,7 @@
 // Contact Form Scripts
-
 $(function() {
 
-    $("#articleForm input,#articleForm textarea").jqBootstrapValidation({
+    $("#envoiMessage input,#envoiMessage textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -16,7 +15,7 @@ $(function() {
             data=formdata;
 
             $.ajax({
-                url: "./mail/contact_me.php",
+                url: "contact_me.php",
                 method: "POST",
                 contentType: false,
                 processData: false,
@@ -34,7 +33,7 @@ $(function() {
                         .append('</div>');
 
                     //clear all fields
-                    $('#articleForm').trigger("reset");
+                    $('#envoiMessage').trigger("reset");
                 },
                 error: function() {
                     // Fail message
@@ -44,9 +43,12 @@ $(function() {
                     // $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#articleForm').trigger("reset");
+                    $('#envoiMessage').trigger("reset");
                 },
+
+               
             });
+
         },
         filter: function() {
             return $(this).is(":visible");
@@ -62,4 +64,13 @@ $(function() {
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
     $('#success').html('');
+});
+
+$(".formControl").change(function() {
+    var champ = $('<input>');
+    var nbInput = 0;
+    nbInput++;
+    champ.attr('type', 'file');
+    champ.attr('name', 'fichier'+nbInput);
+    champ.appendTo('form');
 });

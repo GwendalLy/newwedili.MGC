@@ -13,71 +13,64 @@
         <meta name="copyright" content=""/>
        
         <title>Wedili</title>
-              
-        <!--favicon-->
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        
+
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+
     </head>
     <body> 
-             <!-- CHANGE THE ACTION TO THE PHP SCRIPT THAT WILL PROCESS THE FILE VIA AJAX -->
-            <!--<form id="file-upload-form" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                 <input id="file-upload" type="file" name="fileUpload" />
-                <label for="file-upload" id="file-drag">
-                     Select a file to upload
-                    <br />OR
-                    <br />Drag a file into this box
-                    <br /><br /><span id="file-upload-btn" class="button">Add a file</span>
-                </label>
-
-                <progress id="file-progress" value="0">
-                    <span>0</span>%
-                </progress>
-
-                <output for="file-upload" id="messages"></output>
-            </form> -->
 
        
        
        
        <div class="weTransfert contwe">
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
+           
+            <div>
+                   <p>Ajoutez vos fichiers</p>
+                    <label>+</label>
+                    <input type="file" name="fichier"/>
+            </div>
+           
+           
+           
+           
+           
             <div>
                 <div>
-                    <label>Votre adresse :</label>
+                    <label></label>
                     <input type="text" class="formControl" placeholder="Votre adresse :" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div>
                 <div>
-                    <label>Envoyer à :</label>
-                    <input type="text" class="formControl" placeholder="Envoyer a :" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
+
+                    <label></label>
+
+                    <input type="text" class="formControl" placeholder="Envoyer à" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div>
                 <div>
-                    <label>Votre message :</label>
+                    <label></label>
                     <textarea class="formControl" placeholder="Contenu :" id="message" name="message"></textarea>
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div>
-                <div>
-                    <label>Fichier :</label>
-                    <input type="file" name="fichier"/>
-                    <p class="help-block text-danger"></p>
-                </div>
+
             </div>
             <div id="success"></div>
             <div>
                 <div>
-                    <button type="submit">Send</button>
+                    <button type="submit">Transférer</button>
                 </div>
             </div>
         </form>
     </div>
+
 
             <?php
             // $fn = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : false);
@@ -102,6 +95,11 @@
         <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
    
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script type="text/javascript" src="js/contact_me.js"></script>
 
     </body>
 </html>

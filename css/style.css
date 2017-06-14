@@ -5,7 +5,10 @@
         url('prestige-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    src: url('../fonts/prestige-webfont.woff2') format('woff2'),
+        url('../fonts/prestige-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -35,6 +38,7 @@ body{
     font-family: 'prestige_elitenormal';
     line-height: 2;
     font-size: 20px;
+
 }
 
 .container {
@@ -85,7 +89,7 @@ height: auto;
 
 .weTransfert{
     text-align: center;
-    background-color: blue;
+    background-color: #0f056b;
     font-size: 20px;
     color: white;
     width: 40%;
