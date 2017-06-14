@@ -22,69 +22,53 @@ $adresse = htmlspecialchars($_POST['adresse']);
 $destinataire = htmlspecialchars($_POST['destinataire']);
 $message = htmlspecialchars($_POST['message']);
 
-$servername = "localhost";
-$username = "lgwendal";
-$password = "lgwendal@2017";
+$newarchive = time().'-Archive.zip';
+$newdossier = time();
+mkdir('fichierEnvoi/'.$newdossier);
 
 if ($_FILES['fichier']['error'] == 0){
-
-	$infosfichier = pathinfo($_FILES['fichier']['name']);
-  $extension_upload = $infosfichier['extension'];
-  $namefichier = $infosfichier['filename'];
-  $file = '' .time(). '' .$namefichier. '.' .$extension_upload;
-
-  move_uploaded_file( $_FILES['fichier']["tmp_name"], "./fichierEnvoi/".$file);
+  	move_uploaded_file($_FILES['fichier']['tmp_name'], './fichierEnvoi/'.$newdossier.'/'.$_FILES['fichier']['name']);
 }
 
 $zip = new ZipArchive();
 if(is_dir('fichierEnvoi/')){
-  if($zip->open('fichierEnvoi/Archive.zip', ZipArchive::CREATE) === true) {
+  if($zip->open('fichierEnvoi/'.$newdossier.'/Archive.zip', ZipArchive::CREATE) === true) {
 
+<<<<<<< HEAD
      /* $infosadresse = pathinfo($adresse);
       $nameadresse = $infosadresse['filename'];
       rename ("/Archive.zip", '/'.$nameadresse.'Archive.zip');*/
+=======
+      echo'fichierEnvoi/Archive.zip ouvert<br/>';
+>>>>>>> f1daa08db6bfd9abc6ad849700c7f3cb048a0ce0
 
-      echo 'fichierEnvoi.zip ouvert<br/>';
-      $fichiers = scandir('fichierEnvoi/');
+      $fichiers = scandir('fichierEnvoi/'.$newdossier);
       unset($fichiers[0], $fichiers[1]);
       foreach($fichiers as $f) {
-          if(!$zip->addFile('fichierEnvoi/'.$f, $f)) {
+          if(!$zip->addFile('fichierEnvoi/'.$newdossier.'/'.$f, $f)) {
             echo 'Impossible d"ajouter '.$f.'.<br/>';
           }
-      }
+      }     
       $zip->close();
+      echo 'fichierEnvoi/Archive.zip fermé<br/>';
+
+      rename("fichierEnvoi/".$newdossier."/Archive.zip", 'fichierEnvoi/'.$newdossier.'/'.$newarchive);
+
   } else {
       echo "Impossible d'ouvrir fichierEnvoi.zip<br/>";
   }
 }
-unlink("fichierEnvoi/".$file);
+unlink('./fichierEnvoi/'.$newdossier.'/'.$_FILES['fichier']['name']);
 
-$liens = "http://vesoul.codeur.online/front/lgwendal/newwedili.MGC/fichierEnvoi/".$nameadresse."Archive.zip";
+$liens = "http://vesoul.codeur.online/front/lgwendal/newwedili.MGC/fichierEnvoi/".$newarchive."Archive.zip";
 
 if(!in_array(true, $error)) {
-    mail($_POST['destinataire'], 'Vous avez des fichiers à télécharger', $_POST['message'], $liens, 'From: "'.$_POST['adresse']);    
+    mail($_POST['destinataire'], 'Vous avez des fichiers à télécharger', $_POST['message'], 'From: "'.$_POST['adresse']);    
     $error['sendEmail'] = false;
 }
 else{
     $error['sendEmail'] = true;
 }
-
-// try {
-//     $conn = new PDO("mysql:host=$servername;dbname=lgwendal", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-
-//         $sql = $conn->prepare('INSERT INTO wedili(sonAdresse, votreAdresse, message, fichier) VALUES(:sonAdresse,:votreAdresse,:message,:fichier)');
-//         $sql->bindParam(':sonAdresse', $destinataire);
-// 		$sql->bindParam(':votreAdresse', $adresse);
-// 		$sql->bindParam(':message', $message);
-// 		$sql->bindParam(':fichier', $fichier);
-// 		$fichier = "fichier/".$file;
-//         $sql->execute();
-// }
-// catch(PDOException $e) {
-//     echo "Connection failed: " . $e->getMessage();
-// }
-
-// $conn = null;
 
 echo json_encode($_FILES);        
 ?>
