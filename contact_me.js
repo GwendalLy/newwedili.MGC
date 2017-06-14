@@ -1,5 +1,4 @@
 // Contact Form Scripts
-
 $(function() {
 
     $("#envoiMessage input,#envoiMessage textarea").jqBootstrapValidation({
@@ -46,7 +45,10 @@ $(function() {
                     //clear all fields
                     $('#envoiMessage').trigger("reset");
                 },
+
+               }
             });
+
         },
         filter: function() {
             return $(this).is(":visible");
@@ -63,3 +65,12 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
+
+$(".formControl").change(function(){
+                var champ = $('<input>');
+                var nbInput = 0;
+                nbInput++;
+                champ.attr('type', 'file');
+                champ.attr('name', 'fichier'+nbInput);
+                champ.appendTo('form');
+            )};
