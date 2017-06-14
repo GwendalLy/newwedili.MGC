@@ -19,7 +19,7 @@
 
     </head>
     <body> 
-        <article>
+        <!--<article>
             <p>glissez-déposez vos fichiers ici</p>
             <div id="holder">
             </div> 
@@ -30,15 +30,20 @@
 
         </article>
 
+       -->
        
-       
-       
+       <h2>Déposez vos fichiers ici</h2>
+
+        <div class="file-drop-area">
+          <span class="fake-btn">Choisissez vos fichiers</span>
+          <span class="file-msg js-set-number">ou glissez-déposez ici</span>
+          <input class="file-input" type="file" multiple>
+        </div>
        <div class="weTransfert contwe">
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
            
             <div>
-                    <label></label>
-                    <input type="file" name="fichier"/>
+                    
             </div>
            
            
@@ -75,37 +80,19 @@
                 </div>
  
         </form>
-<<<<<<< HEAD
+
         
-=======
+
     </div>
 
 
-            <?php
-            // $fn = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : false);
-            // $targetDir = 'tmp/';
-
-            // if ($fn) {
-            //     if (isFileValid($fn)) {
-            //     // AJAX call
-            //         file_put_contents(
-            //             $targetDir . $fn,
-            //                 file_get_contents('php://input')
-            //             );
-            //         removeFile($fn);
-            //     }
-            // }
-
-            // function removeFile($file) {
-            //     unlink($targetDir . $file);
-            // }
-            ?>
+            
 
         <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
    
 
->>>>>>> 5c71410a4d9c033fbb7ceff416cc0f6caa82e6b9
+
 
         <script src="js/jquery.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>

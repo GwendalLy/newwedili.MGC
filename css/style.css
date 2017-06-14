@@ -141,45 +141,119 @@ button{
     text-transform: uppercase;
 
 }
-.placeholder{
-    font-size: 20px;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************DRAG AND DROP*********************************************/
+
+
+h2 {
+  text-align: center;
+  margin: 50px 0;
 }
 
-#holder {
-    border: 10px dashed #ccc;
-    width: 300px;
-    min-height: 300px;
-    margin: 20px auto;
+.file-drop-area {
+  border: 1px dashed #0F056B;
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  transition: 0.2s;
+}
+  .file-drop-area.is-active {
+    background-color: #0F056B light;
+  
 }
 
-#holder:hover {
-    border: 10px dashed #0f056b;
+.fake-btn {
+  background-color: #0F056B;
+  border: 1px solid #9E9EC4;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
 }
-#holder img {
-    display: block;
-    margin: 10px auto;
+
+.file-msg {
+  font-size: small;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: calc(100% - 130px);
+  vertical-align: middle;
 }
-#holder p {
-    margin: 10px; 
-    font-size: 14px; 
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
 }
-progress {
-    width: 100%; 
-}
-progress:after{ 
-    content: '%'; 
-}
-.fail {
-    background: #c00;
-    padding: 2px;
-    color: #fff; 
-}
-.hidden { 
-    display: none !important;
-}
-p{
-    font-size: 12px;
-    background-color: #0f056b;
-    color: white;
+  .file-input:focus {
+    outline: none;
+  
 }
