@@ -2,7 +2,7 @@
 <html lang="fr">     
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initscale=1.0">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
         <meta name="description" content="projet wetransfert"/>
         <meta name="keywords" content="web, wetransfert"/>
         <meta http-equiv="Content-Language" content="fr"/>
@@ -18,6 +18,16 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">      
     </head>
     <body> 
+        <article>
+            <p>glissez-déposez vos fichiers ici</p>
+            <div id="holder">
+            </div> 
+            <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+            <p id="filereader">File API & FileReader API not supported</p> 
+            <p id="formdata">XHR2's FormData is not supported</p>
+            <p id="progress">XHR2's upload progress isn't supported</p>  
+
+        </article>
 
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
             <div>
@@ -55,6 +65,7 @@
                 </div>
             </div>
         </form>
+        
 
         <script src="js/jquery.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>
