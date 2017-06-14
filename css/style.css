@@ -1,11 +1,10 @@
 
 @font-face {
     font-family: 'prestige_elitenormal';
-    src: url('prestige-webfont.woff2') format('woff2'),
-        url('prestige-webfont.woff') format('woff');
+    src: url('../fonts/prestige-webfont.woff2') format('woff2'),
+        url('../fonts/prestige-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -35,6 +34,7 @@ body{
     font-family: 'prestige_elitenormal';
     line-height: 2;
     font-size: 20px;
+    
 }
 
 .container {
