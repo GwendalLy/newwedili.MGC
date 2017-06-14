@@ -27,47 +27,43 @@
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
            
             <div>
-                   <p>Ajoutez vos fichiers</p>
-                    <label>+</label>
+                    <label></label>
                     <input type="file" name="fichier"/>
             </div>
            
            
-           
-           
-           
-            <div>
-                <div>
-                    <label></label>
-                    <input type="text" class="formControl" placeholder="Votre adresse :" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
                 <div>
 
                     <label></label>
 
                     <input type="text" class="formControl" placeholder="Envoyer à" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
                     <p class="help-block text-danger"></p>
-                </div>
-            </div>
+                </div>          
+           
+           
             <div>
                 <div>
                     <label></label>
-                    <textarea class="formControl" placeholder="Contenu :" id="message" name="message"></textarea>
+                    <input type="text" class="formControl" placeholder="Votre adresse mail" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div>
-
+ 
             </div>
-            <div id="success"></div>
             <div>
+                <div>
+                    <label></label>
+                    <textarea class="formControl" placeholder="Message" id="message" name="message"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+
                 <div>
                     <button type="submit">Transférer</button>
                 </div>
-            </div>
+ 
         </form>
     </div>
 
