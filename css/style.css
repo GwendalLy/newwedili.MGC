@@ -12,135 +12,72 @@
 }
 
 
-.container {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.signature {
-    position: relative;
-    overflow: auto;
-    width: 100%;
-    height: 0;
-    padding-bottom: 55.30973%;
-}
-.signature svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
 body{
-    
+    color: white;
     font-family: 'prestige_elitenormal';
-    line-height: 2;
-    font-size: 20px;
-
 }
-
-.container {
-    max-width: 400px;
-    margin-left: 20px;
-}
-
-
-.signature {
-    position: relative;
-    overflow: auto;
-    width: 100%;
-    height: 0;
-    padding-bottom: 55.30973%;
-}
-
-.signature svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/*.background{
-position: relative;
-overflow: auto;
-width: 100%;
-height: 0;
-padding-bottom: 55.30973%;
-
-
-}*/
-
-.background svg{
-    position: absolute;
-    /*top: 0;*/
-    left: 0;
-    /* width: 100%;
-    height: 100%;*/
-
-}
-
-/*  .background{
-width: 50%;
-height: auto;
-} */
 
 .weTransfert{
-    text-align: center;
     background-color: #0f056b;
-    font-size: 20px;
     color: white;
     width: 40%;
-    /*font-family:'prestige_elitenormal' ;*/
-    margin: auto;
-    margin-right: 0;
+    padding-left: 15px;
+    padding-top: 30px;
 
 }        
 
-.contwe{
-    justify-content: flex-end;
-    margin: 0;
-
+.contwe {
+    width: 300px;
+    height: 400px;
 }
 
 input{
-    width: 50%;
+    font-size: 18px;
+    color: white;
+    width: 100%;
     height: 30px;
     background-color: transparent;
-    border-color: white;
-    z-index: 10;
+    border: 0px;
     font-family: 'prestige_elitenormal';
-    font-size: 15px;
+
+}
+
+textarea { 
+   font-family: 'prestige_elitenormal';
+     color: white;
+    font-size: 18px;
+}
+
+.envoi {
+    color: red;
 }
 
 
+hr {
+    margin-right: 15px;
+}
 
 textarea{
     width: 50%;
     height: auto;
-    background-color: transparent;
-    border-color: white;
-
-
+    background-color: #0f056b;
+    border:0px;
 }
 
 label{
     display: block;
 
-
-
 }
 
 button{
-    background-color: white;
-    color: blue;
+    background-color: #0f056b;
+    color: white;
     font-family: 'prestige_elitenormal';
-    font-size: 20px;
-    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 40px;
 
 }
+<<<<<<< HEAD
 
 
 
@@ -257,3 +194,5 @@ h2 {
     outline: none;
   
 }
+=======
+>>>>>>> 8af4bfd17069b6d7e3f96e30058a524ad2e4b802
