@@ -40,9 +40,9 @@ $zip = new ZipArchive();
 if(is_dir('fichierEnvoi/')){
   if($zip->open('fichierEnvoi/Archive.zip', ZipArchive::CREATE) === true) {
 
-      $infosadresse = pathinfo($adresse);
+     /* $infosadresse = pathinfo($adresse);
       $nameadresse = $infosadresse['filename'];
-      rename ("/Archive.zip", '/'.$nameadresse.'Archive.zip');
+      rename ("/Archive.zip", '/'.$nameadresse.'Archive.zip');*/
 
       echo 'fichierEnvoi.zip ouvert<br/>';
       $fichiers = scandir('fichierEnvoi/');
