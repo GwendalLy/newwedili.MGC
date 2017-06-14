@@ -1,60 +1,143 @@
- <!DOCTYPE html>
-<html lang="fr">     
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initscale=1.0">
-        <meta name="description" content="projet wetransfert"/>
-        <meta name="keywords" content="web, wetransfert"/>
-        <meta http-equiv="Content-Language" content="fr"/>
-        <meta name="reply-to" content=""/>
-        <meta name="robots" content="all"/>
-        <meta name="revisit-after" content="7 days"/>
-        <meta name="author" content=""/>
-        <meta name="copyright" content=""/>
-       
-        <title>Wedili</title>
 
-        <link rel="stylesheet" href="style.css" type="text/css">      
-    </head>
-    <body> 
+@font-face {
+    font-family: 'prestige_elitenormal';
+    src: url('prestige-webfont.woff2') format('woff2'),
+        url('prestige-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-        <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
-            <div>
-                <div>
-                    <label>Votre adresse :</label>
-                    <input type="text" class="formControl" placeholder="Votre adresse :" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Envoyer a :</label>
-                    <input type="text" class="formControl" placeholder="Envoyer a :" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Votre message :</label>
-                    <textarea class="formControl" placeholder="Contenu :" id="message" name="message"></textarea>
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Fichier :</label>
-                    <input type="file" name="fichier"/>
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div id="success"></div>
-            <div>
-                <div>
-                    <button type="submit">Send</button>
-                </div>
-            </div>
-        </form>
-        
-        <script type="text/javascript" src="contact_me.php"></script>
-    </body>
-</html>
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signature {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55.30973%;
+}
+.signature svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+body{
+    
+    font-family: 'prestige_elitenormal';
+    line-height: 2;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+
+.signature {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55.30973%;
+}
+
+.signature svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*.background{
+position: relative;
+overflow: auto;
+width: 100%;
+height: 0;
+padding-bottom: 55.30973%;
+
+
+}*/
+
+.background svg{
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    /* width: 100%;
+    height: 100%;*/
+
+}
+
+/*  .background{
+width: 50%;
+height: auto;
+} */
+
+.weTransfert{
+    text-align: center;
+    background-color: blue;
+    font-size: 20px;
+    color: white;
+    width: 40%;
+    /*font-family:'prestige_elitenormal' ;*/
+    margin: auto;
+    margin-right: 0;
+
+}        
+
+.contwe{
+    justify-content: flex-end;
+    margin: 0;
+
+}
+
+input{
+    width: 50%;
+    height: 30px;
+    background-color: transparent;
+    border-color: white;
+    z-index: 10;
+    font-family: 'prestige_elitenormal';
+    font-size: 15px;
+}
+
+
+
+textarea{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    border-color: white;
+
+
+}
+
+label{
+    display: block;
+
+
+
+}
+
+button{
+    background-color: white;
+    color: blue;
+    font-family: 'prestige_elitenormal';
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.placeholder{
+    font-size: 20px;
+
+}
