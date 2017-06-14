@@ -16,7 +16,8 @@
               
         <!--favicon-->
 
-        <link rel="stylesheet" href="style.css" type="text/css">      
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        
     </head>
     <body> 
              <!-- CHANGE THE ACTION TO THE PHP SCRIPT THAT WILL PROCESS THE FILE VIA AJAX -->
@@ -36,6 +37,10 @@
                 <output for="file-upload" id="messages"></output>
             </form> -->
 
+       
+       
+       
+       <div class="weTransfert contwe">
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
             <div>
                 <div>
@@ -46,7 +51,7 @@
             </div>
             <div>
                 <div>
-                    <label>Envoyer a :</label>
+                    <label>Envoyer à :</label>
                     <input type="text" class="formControl" placeholder="Envoyer a :" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
                     <p class="help-block text-danger"></p>
                 </div>
@@ -72,6 +77,7 @@
                 </div>
             </div>
         </form>
+    </div>
 
             <?php
             // $fn = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : false);
@@ -92,6 +98,10 @@
             //     unlink($targetDir . $file);
             // }
             ?>
+
+        <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+   
 
     </body>
 </html>

@@ -1,0 +1,143 @@
+
+@font-face {
+    font-family: 'prestige_elitenormal';
+    src: url('prestige-webfont.woff2') format('woff2'),
+        url('prestige-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signature {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55.30973%;
+}
+.signature svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+body{
+    
+    font-family: 'prestige_elitenormal';
+    line-height: 2;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+
+.signature {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55.30973%;
+}
+
+.signature svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*.background{
+position: relative;
+overflow: auto;
+width: 100%;
+height: 0;
+padding-bottom: 55.30973%;
+
+
+}*/
+
+.background svg{
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    /* width: 100%;
+    height: 100%;*/
+
+}
+
+/*  .background{
+width: 50%;
+height: auto;
+} */
+
+.weTransfert{
+    text-align: center;
+    background-color: blue;
+    font-size: 20px;
+    color: white;
+    width: 40%;
+    /*font-family:'prestige_elitenormal' ;*/
+    margin: auto;
+    margin-right: 0;
+
+}        
+
+.contwe{
+    justify-content: flex-end;
+    margin: 0;
+
+}
+
+input{
+    width: 50%;
+    height: 30px;
+    background-color: transparent;
+    border-color: white;
+    z-index: 10;
+    font-family: 'prestige_elitenormal';
+    font-size: 15px;
+}
+
+
+
+textarea{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    border-color: white;
+
+
+}
+
+label{
+    display: block;
+
+
+
+}
+
+button{
+    background-color: white;
+    color: blue;
+    font-family: 'prestige_elitenormal';
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.placeholder{
+    font-size: 20px;
+
+}
