@@ -14,8 +14,9 @@
        
         <title>Wedili</title>
 
+
         <link rel="stylesheet" href="css/style.css" type="text/css"> 
-        <link rel="stylesheet" href="css/style.css" type="text/css">      
+
     </head>
     <body> 
         <article>
@@ -29,46 +30,86 @@
 
         </article>
 
+       
+       
+       
+       <div class="weTransfert contwe">
         <form action="contact_me.php" method="post" name="posterArticle" id="envoiMessage" enctype="multipart/form-data" novalidate>
+           
             <div>
-                <div>
-                    <label>Votre adresse mail</label>
-                    <input type="text" class="formControl" placeholder="Votre adresse :" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Envoyer à</label>
-                    <input type="text" class="formControl" placeholder="Envoyer a :" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Message</label>
-                    <textarea class="formControl" placeholder="Contenu :" id="message" name="message"></textarea>
-                    <p class="help-block text-danger"></p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Ajoutez vos fichiers</label>
+                    <label></label>
                     <input type="file" name="fichier"/>
+            </div>
+           
+           
+                <div>
+
+                    <label></label>
+
+                    <input type="text" class="formControl" placeholder="Envoyer à" id="destinataire" name="destinataire" required data-validation-required-message="Entrez l'adresse du destinataire.">
+                    <p class="help-block text-danger"></p>
+                </div>          
+           
+           
+            <div>
+                <div>
+                    <label></label>
+                    <input type="text" class="formControl" placeholder="Votre adresse mail" id="adresse" name="adresse" required data-validation-required-message="Entrez votre nom.">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
-            <div id="success"></div>
             <div>
+ 
+            </div>
+            <div>
+                <div>
+                    <label></label>
+                    <textarea class="formControl" placeholder="Message" id="message" name="message"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+
                 <div>
                     <button type="submit">Transférer</button>
                 </div>
-            </div>
+ 
         </form>
+<<<<<<< HEAD
         
+=======
+    </div>
+
+
+            <?php
+            // $fn = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : false);
+            // $targetDir = 'tmp/';
+
+            // if ($fn) {
+            //     if (isFileValid($fn)) {
+            //     // AJAX call
+            //         file_put_contents(
+            //             $targetDir . $fn,
+            //                 file_get_contents('php://input')
+            //             );
+            //         removeFile($fn);
+            //     }
+            // }
+
+            // function removeFile($file) {
+            //     unlink($targetDir . $file);
+            // }
+            ?>
+
+        <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+   
+
+>>>>>>> 5c71410a4d9c033fbb7ceff416cc0f6caa82e6b9
 
         <script src="js/jquery.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>
         <script type="text/javascript" src="js/contact_me.js"></script>
+
     </body>
 </html>

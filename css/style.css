@@ -1,6 +1,10 @@
 
 @font-face {
     font-family: 'prestige_elitenormal';
+    src: url('prestige-webfont.woff2') format('woff2'),
+        url('prestige-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     src: url('../fonts/prestige-webfont.woff2') format('woff2'),
         url('../fonts/prestige-webfont.woff') format('woff');
     font-weight: normal;
@@ -34,7 +38,7 @@ body{
     font-family: 'prestige_elitenormal';
     line-height: 2;
     font-size: 20px;
-    
+
 }
 
 .container {
@@ -85,7 +89,7 @@ height: auto;
 
 .weTransfert{
     text-align: center;
-    background-color: blue;
+    background-color: #0f056b;
     font-size: 20px;
     color: white;
     width: 40%;
@@ -150,7 +154,7 @@ button{
 }
 
 #holder:hover {
-    border: 10px dashed #0c0;
+    border: 10px dashed #0f056b;
 }
 #holder img {
     display: block;
@@ -173,4 +177,9 @@ progress:after{
 }
 .hidden { 
     display: none !important;
+}
+p{
+    font-size: 12px;
+    background-color: #0f056b;
+    color: white;
 }
